@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { Typography } from '@/shared/typography';
+
+import { Sidebar } from '@/widgets/sidebar';
 </script>
 
 <template>
   <div class="layout">
     <div class="layout__sidebar">
-      <aside><p>Sidebar</p></aside>
+      <aside>
+        <Sidebar />
+      </aside>
     </div>
     <div class="layout__main">
       <header class="header">
