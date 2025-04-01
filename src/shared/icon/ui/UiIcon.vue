@@ -1,21 +1,14 @@
 <script setup lang="ts">
-import { computed } from 'vue';
 import type { Props } from '../types/icon';
+import { icnosMaps } from '../types/iconsMaps';
 
 const props = defineProps<Props>();
 
-const iconPath = computed(() => {
-  return new URL(`./icons/${props.name}.svg`, import.meta.url).href;
-});
+const iconSvg = icnosMaps[props.name];
 </script>
 
 <template>
-  <img
-    :src="iconPath"
-    :alt="name"
-    :class="`icon icon--${props.class} ${props.color ? 'icon--' + props.color : ''}`"
-    :width="props.size"
-  />
+  <span class="icon" v-html="iconSvg" :style="{ width: props.size }"></span>
 </template>
 
 <style scoped lang="scss"></style>

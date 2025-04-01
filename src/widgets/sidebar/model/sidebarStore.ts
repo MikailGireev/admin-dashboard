@@ -27,7 +27,7 @@ export const useSidebarStore = defineStore('sidebar', () => {
     {
       label: 'Order List',
       path: '/order',
-      icon: 'order',
+      icon: 'orders',
     },
     {
       label: 'Product Stock',

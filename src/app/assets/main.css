@@ -1,5 +1,9 @@
 @import './base.css';
 
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 :root {
   --color-primary: #202224;
 }
