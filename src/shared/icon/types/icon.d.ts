@@ -7,6 +7,8 @@ export type Props = {
     | 'orders'
     | 'product-stock'
     | 'settings'
+    | 'menu'
+    | 'search'
     | string;
   color?: 'white' | 'dark';
   size?: string;

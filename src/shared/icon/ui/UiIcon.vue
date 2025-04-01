@@ -8,7 +8,7 @@ const iconSvg = icnosMaps[props.name];
 </script>
 
 <template>
-  <span class="icon" v-html="iconSvg" :style="{ width: props.size }"></span>
+  <span :class="`icon ${props.class}`" v-html="iconSvg" :style="{ width: props.size }"></span>
 </template>
 
 <style scoped lang="scss"></style>

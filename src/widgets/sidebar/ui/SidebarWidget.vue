@@ -29,18 +29,36 @@ const { pages } = store;
   align-items: center;
 
   &__link {
+    position: relative;
     display: flex;
     width: 192px;
     height: 50px;
     align-items: center;
     gap: 16px;
     padding-left: 16px;
-    transition: all 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
     border-radius: 6px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 8px;
+      bottom: 8px;
+      width: 4px;
+      border-radius: 2px;
+      background-color: transparent;
+      transition: background-color 0.2s ease;
+    }
+
     &:hover {
       background-color: #4880ff;
       p {
         color: #ffffff;
+      }
+
+      &::before {
+        background-color: #4880ff;
       }
 
       &:deep(.icon) {

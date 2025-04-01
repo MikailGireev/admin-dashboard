@@ -39,5 +39,24 @@ export const icnosMaps: Record<string, string> = {
 	<path id="" d="M0.68 0L0 0L0 16.5L13.75 16.5L13.75 0L0.68 0ZM1.37 4.81L1.37 1.37L12.37 1.37L12.37 4.81L1.37 4.81ZM1.37 10.31L1.37 6.18L12.37 6.18L12.37 10.31L1.37 10.31ZM1.37 15.12L1.37 11.68L12.37 11.68L12.37 15.12L1.37 15.12Z" fill-opacity="1.000000" fill-rule="evenodd"/>
 </svg>
 `,
+  menu: `<svg width="16.500000" height="12.375000" viewBox="0 0 16.5 12.375" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<path id="" d="M16.5 0L0 0L0 1.37L16.5 1.37L16.5 0ZM16.5 5.5L0 5.5L0 6.87L16.5 6.87L16.5 5.5ZM16.5 11L0 11L0 12.37L16.5 12.37L16.5 11Z" fill="#202224" fill-opacity="1.000000" fill-rule="evenodd"/>
+</svg>
+`,
+  search: `<svg width="15.608574" height="15.609070" viewBox="0 0 15.6086 15.6091" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<g opacity="0.500000" style="mix-blend-mode:normal">
+		<path id="Oval" d="M11.98 4.94C10.82 2.21 7.67 0.94 4.94 2.1C2.21 3.26 0.94 6.41 2.1 9.14C3.26 11.87 6.41 13.14 9.14 11.98C11.87 10.82 13.14 7.67 11.98 4.94Z" stroke="#000000" stroke-opacity="1.000000" stroke-width="1.200000" stroke-linejoin="round"/>
+		<path id="Path" d="M10.84 10.84L15 15" stroke="#000000" stroke-opacity="1.000000" stroke-width="1.200000" stroke-linejoin="round" stroke-linecap="round"/>
+	</g>
+</svg>
+`,
   settings: 'settings',
 };
