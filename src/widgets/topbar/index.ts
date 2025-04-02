@@ -1,1 +1,1 @@
-export { default as Topbar } from './ui/TopbarWindgets.vue';
+export { default as Topbar } from './ui/TopbarWindget.vue';

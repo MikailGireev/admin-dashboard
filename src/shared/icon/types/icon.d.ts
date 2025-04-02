@@ -9,6 +9,8 @@ export type Props = {
     | 'settings'
     | 'menu'
     | 'search'
+    | 'notification'
+    | 'drop-down'
     | string;
   color?: 'white' | 'dark';
   size?: string;

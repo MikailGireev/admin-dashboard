@@ -58,5 +58,21 @@ export const icnosMaps: Record<string, string> = {
 	</g>
 </svg>
 `,
+  notification: `<svg width="24.000000" height="25.500000" viewBox="0 0 24 25.5" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs/>
+	<path id="Combined Shape" d="M10.0277 0L13.9723 0C16.2653 0 18.1916 1.72412 18.4448 4.00305L19.5 13.5L22.5 13.5C23.3284 13.5 24 14.1716 24 15L24 16.5C24 17.3284 23.3284 18 22.5 18L1.5 18C0.67157 18 0 17.3284 0 16.5L0 15C0 14.1716 0.67157 13.5 1.5 13.5L4.5 13.5L5.55524 4.00305C5.80841 1.72412 7.73474 0 10.0277 0Z" clip-rule="evenodd" fill="#4880FF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<g opacity="0.300000" style="mix-blend-mode:normal">
+		<rect id="Rectangle 23" x="9.000000" y="19.500000" rx="2.250000" width="6.000000" height="6.000000" fill="#FF0000" fill-opacity="1.000000"/>
+	</g>
+</svg>
+`,
+  'drop-down': `<svg width="8.166687" height="4.666687" viewBox="0 0 8.16669 4.66669" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs/>
+	<path id="Shape" d="M4.08 3.25L0.99 0.17C0.76 -0.06 0.39 -0.06 0.17 0.17C-0.06 0.39 -0.06 0.76 0.17 0.99L3.67 4.49C3.89 4.72 4.26 4.72 4.49 4.49L7.99 0.99C8.22 0.76 8.22 0.39 7.99 0.17C7.76 -0.06 7.39 -0.06 7.17 0.17L4.08 3.25Z" fill="#646464" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<mask id="mask16_1465" mask-type="alpha" maskUnits="userSpaceOnUse" x="0.000000" y="0.000000" width="8.166687" height="4.666656">
+		<path id="Shape" d="M4.08 3.25L0.99 0.17C0.76 -0.06 0.39 -0.06 0.17 0.17C-0.06 0.39 -0.06 0.76 0.17 0.99L3.67 4.49C3.89 4.72 4.26 4.72 4.49 4.49L7.99 0.99C8.22 0.76 8.22 0.39 7.99 0.17C7.76 -0.06 7.39 -0.06 7.17 0.17L4.08 3.25Z" fill="#646464" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</mask>
+</svg>
+`,
   settings: 'settings',
 };
