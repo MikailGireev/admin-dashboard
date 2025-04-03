@@ -6,13 +6,18 @@ import { Icon } from '@/shared/icon';
 import { useSidebarStore } from '../model/sidebarStore';
 
 const store = useSidebarStore();
-const { pages } = store;
+const { mainMenu, pages } = store;
 </script>
 
 <template>
   <div class="sidebar">
     <Logo class="sidebar__logo" varint="light" />
     <div class="sidebar__content">
+      <router-link class="sidebar__link" v-for="page in mainMenu" :key="page.label" :to="page.path">
+        <Icon width="22px" :class="page.icon" :name="page.icon" />
+        <Typography tag="p" color="primary">{{ page.label }}</Typography>
+      </router-link>
+      <hr class="sidebar__line" />
       <router-link class="sidebar__link" v-for="page in pages" :key="page.label" :to="page.path">
         <Icon width="22px" :class="page.icon" :name="page.icon" />
         <Typography tag="p" color="primary">{{ page.label }}</Typography>
@@ -27,6 +32,12 @@ const { pages } = store;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &__line {
+    margin: 16px 0;
+    background-color: #e0e0e0;
+    width: 220px;
+  }
 
   &__link {
     position: relative;

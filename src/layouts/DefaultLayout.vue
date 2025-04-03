@@ -33,5 +33,10 @@ import { Topbar } from '@/widgets/topbar';
     width: 100%;
     height: 100vh;
   }
+
+  .main {
+    background-color: #f5f6fa;
+    height: 100vh;
+  }
 }
 </style>

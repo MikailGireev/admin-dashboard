@@ -6,6 +6,7 @@ import { Input } from '@/shared/input';
 import { Icon } from '@/shared/icon';
 import { Notification } from '@/shared/notification';
 import { Lang } from '@/entities/lang';
+import UserCard from '@/entities/user/ui/UserCard.vue';
 
 const inputValue = defineModel<string>();
 
@@ -19,7 +20,7 @@ watch(inputValue, () => {
     <Container>
       <div class="header__content">
         <div class="header__left">
-          <Icon name="menu" />
+          <Icon class="menu" name="menu" />
           <Input v-model="inputValue" placeholder="Search" width="388px" class="header__input">
             <template v-slot:left--icon><Icon class="left__icon" name="search" /></template>
           </Input>
@@ -28,6 +29,7 @@ watch(inputValue, () => {
         <div class="header__right">
           <Notification />
           <Lang flag="/flags/Flag.svg" title="English" />
+          <UserCard name="Moni Roy" url-img="/avatar/admin.jpeg" role="admin" />
         </div>
       </div>
     </Container>
@@ -47,7 +49,7 @@ watch(inputValue, () => {
   &__left {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 26px;
   }
 
   &__right {
@@ -61,6 +63,10 @@ watch(inputValue, () => {
     z-index: 10;
     top: 3px;
     left: 16px;
+  }
+
+  .menu {
+    cursor: pointer;
   }
 }
 </style>

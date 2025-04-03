@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import type { Pages } from './typres';
+import type { Page } from './types';
 
 export const useSidebarStore = defineStore('sidebar', () => {
-  const pages = ref<Pages[]>([
+  const mainMenu = ref<Page[]>([
     {
       label: 'Dashboard',
       path: '/',
@@ -36,5 +36,48 @@ export const useSidebarStore = defineStore('sidebar', () => {
     },
   ]);
 
-  return { pages };
+  const pages = ref<Page[]>([
+    {
+      label: 'Pricing',
+      path: '/pricing',
+      icon: 'pricing',
+    },
+    {
+      label: 'Calendar',
+      path: '/calendar',
+      icon: 'calendar',
+    },
+    {
+      label: 'To-do',
+      path: '/todo',
+      icon: 'todo',
+    },
+    {
+      label: 'Contact',
+      path: '/contact',
+      icon: 'contact',
+    },
+    {
+      label: 'Invoice',
+      path: '/invoice',
+      icon: 'invoice',
+    },
+    {
+      label: 'Ui Elements',
+      path: '/ui-elements',
+      icon: 'ui-elements',
+    },
+    {
+      label: 'Team',
+      path: '/team',
+      icon: 'team',
+    },
+    {
+      label: 'Table',
+      path: '/table',
+      icon: 'table',
+    },
+  ]);
+
+  return { mainMenu, pages };
 });
