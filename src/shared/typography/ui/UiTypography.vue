@@ -5,7 +5,10 @@ defineProps<Props>();
 </script>
 
 <template>
-  <component :is="tag" :style="{ fontSize: size }" :class="`typography typography--${color}`"
+  <component
+    :is="tag"
+    :style="{ fontSize: size, fontWeight: weight }"
+    :class="`typography typography--${color}`"
     ><slot></slot
   ></component>
 </template>

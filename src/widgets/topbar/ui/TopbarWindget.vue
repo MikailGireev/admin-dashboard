@@ -5,13 +5,22 @@ import { Container } from '@/shared/container';
 import { Input } from '@/shared/input';
 import { Icon } from '@/shared/icon';
 import { Notification } from '@/shared/notification';
+
 import { Lang } from '@/entities/lang';
-import UserCard from '@/entities/user/ui/UserCard.vue';
+import { User, useUserStore } from '@/entities/user';
 
 const inputValue = defineModel<string>();
 
 watch(inputValue, () => {
   console.log(inputValue.value);
+});
+
+const store = useUserStore();
+const { setUser } = store;
+
+setUser({
+  name: 'Moni Roy',
+  role: 'Admin',
 });
 </script>
 
@@ -29,7 +38,7 @@ watch(inputValue, () => {
         <div class="header__right">
           <Notification />
           <Lang flag="/flags/Flag.svg" title="English" />
-          <UserCard name="Moni Roy" url-img="/avatar/admin.jpeg" role="admin" />
+          <User name="Moni Roy" url-img="/avatar/admin.jpeg" role="admin" />
         </div>
       </div>
     </Container>
@@ -38,7 +47,9 @@ watch(inputValue, () => {
 
 <style scoped lang="scss">
 .header {
-  padding: 16px 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
 
   &__content {
     display: flex;

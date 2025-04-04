@@ -19,6 +19,10 @@ export type Props = {
     | 'ui-elements'
     | 'team'
     | 'table'
+    | 'total-user'
+    | 'total-order'
+    | 'total-sales'
+    | 'total-pending'
     | string;
   color?: 'white' | 'dark';
   size?: string;
