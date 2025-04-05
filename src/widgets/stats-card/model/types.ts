@@ -1,4 +1,4 @@
-export type Props = {
+export type StatsCard = {
   value?: number | string;
   title?: string;
   icon: string;

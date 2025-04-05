@@ -66,11 +66,11 @@ export const icnosMaps: Record<string, string> = {
 	</g>
 </svg>
 `,
-  'drop-down': `<svg width="8.166687" height="4.666687" viewBox="0 0 8.16669 4.66669" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  'drop-down': `<svg width="8.166687" height="4.666687" viewBox="0 0 8.16669 4.66669" fill="#646464" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs/>
 	<path id="Shape" d="M4.08 3.25L0.99 0.17C0.76 -0.06 0.39 -0.06 0.17 0.17C-0.06 0.39 -0.06 0.76 0.17 0.99L3.67 4.49C3.89 4.72 4.26 4.72 4.49 4.49L7.99 0.99C8.22 0.76 8.22 0.39 7.99 0.17C7.76 -0.06 7.39 -0.06 7.17 0.17L4.08 3.25Z" fill="#646464" fill-opacity="1.000000" fill-rule="nonzero"/>
 	<mask id="mask16_1465" mask-type="alpha" maskUnits="userSpaceOnUse" x="0.000000" y="0.000000" width="8.166687" height="4.666656">
-		<path id="Shape" d="M4.08 3.25L0.99 0.17C0.76 -0.06 0.39 -0.06 0.17 0.17C-0.06 0.39 -0.06 0.76 0.17 0.99L3.67 4.49C3.89 4.72 4.26 4.72 4.49 4.49L7.99 0.99C8.22 0.76 8.22 0.39 7.99 0.17C7.76 -0.06 7.39 -0.06 7.17 0.17L4.08 3.25Z" fill="#646464" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Shape" d="M4.08 3.25L0.99 0.17C0.76 -0.06 0.39 -0.06 0.17 0.17C-0.06 0.39 -0.06 0.76 0.17 0.99L3.67 4.49C3.89 4.72 4.26 4.72 4.49 4.49L7.99 0.99C8.22 0.76 8.22 0.39 7.99 0.17C7.76 -0.06 7.39 -0.06 7.17 0.17L4.08 3.25Z" fill-opacity="1.000000" fill-rule="nonzero"/>
 	</mask>
 </svg>
 `,
@@ -154,6 +154,19 @@ export const icnosMaps: Record<string, string> = {
 	<g opacity="0.901274" style="mix-blend-mode:normal">
 		<path id="Combined Shape" d="M4.21887 7.23244L5.85242 0.384308C5.94775 -0.015358 6.45764 -0.135826 6.7218 0.178925L8.51978 2.32166C10.2029 1.60497 12.0552 1.20839 14 1.20839C21.7319 1.20839 28 7.4764 28 15.2084C28 22.9404 21.7319 29.2084 14 29.2084C6.26807 29.2084 0 22.9404 0 15.2084C0 13.8952 0.180786 12.6243 0.518799 11.4191L3.08643 12.1393C2.80896 13.1285 2.66663 14.1576 2.66663 15.2084C2.66663 21.4676 7.74072 26.5417 14 26.5417C20.2593 26.5417 25.3334 21.4676 25.3334 15.2084C25.3334 8.94916 20.2593 3.87505 14 3.87505C12.7317 3.87505 11.4965 4.08295 10.3317 4.481L12.1331 6.62785C12.3976 6.94312 12.1892 7.42516 11.7783 7.44844L4.73352 7.84766C4.39929 7.86659 4.14124 7.5581 4.21887 7.23244Z" clip-rule="evenodd" fill="#FF9066" fill-opacity="1.000000" fill-rule="evenodd"/>
 	</g>
+</svg>
+`,
+  'trending-up': `
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	
+	<defs/>
+	<path id="Path" d="M16 6L18.29 8.29L13.41 13.17L9.41 9.17L2 16.59L3.41 18L9.41 12L13.41 16L19.7 9.71L22 12L22 6L16 6Z" fill="#00B69B" fill-opacity="1.000000" fill-rule="nonzero"/>
+</svg>
+`,
+  'trending-down': `<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	
+	<defs/>
+	<path id="Path" d="M16 18L18.29 15.71L13.41 10.83L9.4 14.83L2 7.41L3.4 6L9.4 12L13.41 8L19.7 14.29L22 12L22 18L16 18Z" fill="#F93C65" fill-opacity="1.000000" fill-rule="nonzero"/>
 </svg>
 `,
   settings: 'settings',

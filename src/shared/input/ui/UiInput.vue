@@ -12,7 +12,7 @@ const emit = defineEmits(['update:modelValue']);
     <input
       @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
       class="input"
-      :type="type"
+      :type="type || 'text'"
       :placeholder="placeholder"
       :style="{ width: width }"
     />

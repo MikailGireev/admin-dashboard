@@ -17,4 +17,18 @@ defineProps<Props>();
 .typography--primary {
   color: var(--color-primary);
 }
+
+.typography--error,
+.typography--red {
+  color: var(--color-error);
+}
+
+.typography--success,
+.typography--green {
+  color: var(--color-success);
+}
+
+.typography--trend-label {
+  color: var(--color-trend-label);
+}
 </style>

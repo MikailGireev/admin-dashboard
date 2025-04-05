@@ -36,7 +36,6 @@ import { Topbar } from '@/widgets/topbar';
 
   .main {
     background-color: #f5f6fa;
-    height: 100vh;
   }
 }
 </style>

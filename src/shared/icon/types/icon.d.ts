@@ -23,6 +23,8 @@ export type Props = {
     | 'total-order'
     | 'total-sales'
     | 'total-pending'
+    | 'trending-up'
+    | 'trending-down'
     | string;
   color?: 'white' | 'dark';
   size?: string;

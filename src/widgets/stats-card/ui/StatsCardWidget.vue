@@ -18,6 +18,11 @@ defineProps<Props>();
           <Icon :name="icon" />
         </div>
       </div>
+      <div class="stats-card__trend">
+        <Icon :name="trend?.direction" />
+        <Typography size="12px" :color="trend.color" tag="span"> {{ trend?.percent }} </Typography>
+        <Typography color="trend-label" size="14px" tag="span">{{ trend?.label }}</Typography>
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +34,13 @@ defineProps<Props>();
   padding: 16px;
   background-color: #ffffff;
   border-radius: 14px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   &__icon {
     width: 60px;
@@ -49,9 +61,27 @@ defineProps<Props>();
     background-color: #8280ff33;
   }
 
+  .total-order {
+    background-color: #fec53d33;
+  }
+
+  .total-sales {
+    background-color: #4ad99133;
+  }
+
+  .total-pending {
+    background-color: #ff906633;
+  }
+
   .title__content {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__trend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
 </style>

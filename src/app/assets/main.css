@@ -6,4 +6,7 @@ body {
 
 :root {
   --color-primary: #202224;
+  --color-trend-label: #606060;
+  --color-error: #f93c65;
+  --color-success: #00b69b;
 }
