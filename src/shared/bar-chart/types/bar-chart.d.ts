@@ -1,11 +1,11 @@
+import type { ChartData, ChartOptions } from 'chart.js';
+
 export type DataSets = {
   label: string;
   data: number[];
   borderColor: string;
   backgroundColor: string;
-  tension: number;
-  fill: boolean;
-  pointRadius: number;
+  borderWidth: number;
 };
 
 export type CharData = {
@@ -14,8 +14,8 @@ export type CharData = {
 };
 
 export type Props = {
-  chartData: CharData;
-  chartOptions: object;
+  chartData: ChartData<'bar'>;
+  chartOptions: ChartOptions<'bar'>;
   height?: string;
   width?: string;
 };

@@ -3,6 +3,7 @@ import router from '@/app/router';
 
 import { Container } from '@/shared/container';
 import { Typography } from '@/shared/typography';
+import { DealsTable } from '@/widgets/deals-table';
 import { ChartWindget } from '@/widgets/sales-chart';
 
 import { StatsCard, useStatsCardStore } from '@/widgets/stats-card';
@@ -28,6 +29,7 @@ const { statsCard } = store;
         />
       </div>
       <ChartWindget title="Sales" />
+      <DealsTable/>
     </div>
   </Container>
 </template>
