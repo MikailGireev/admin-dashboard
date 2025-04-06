@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import type { Props } from '../types/avatar';
+interface Props {
+  name?: string;
+  width?: string;
+  class?: string;
+  role: string;
+  url?: string;
+}
 
 defineProps<Props>();
 </script>

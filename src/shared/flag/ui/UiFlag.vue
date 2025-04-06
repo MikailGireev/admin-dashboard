@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import type { Props } from '../types/flag';
+interface Props {
+  name?: string;
+  width?: string;
+  class?: string;
+  url?: string;
+}
 
 defineProps<Props>();
 </script>

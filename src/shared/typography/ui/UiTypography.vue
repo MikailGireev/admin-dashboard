@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import type { Props } from '../types/typography';
+type Props = {
+  tag: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  size?: string;
+  color?: 'primary' | 'secondary' | 'error' | 'success' | 'red' | 'green' | 'trend-label';
+  weight?: 'normal' | 'bold' | 'light' | 'medium';
+};
 
 defineProps<Props>();
 </script>

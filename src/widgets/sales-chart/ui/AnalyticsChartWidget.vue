@@ -2,11 +2,14 @@
 import BarChart from '@/shared/bar-chart/ui/BarChart.vue';
 import { Typography } from '@/shared/typography';
 
-import type { Props } from '../types/analytics-chart';
 import { useChartStore } from '../model/chartStore';
 
 import { onMounted } from 'vue';
 import { Select } from '@/shared/select';
+
+interface Props {
+  title: string;
+}
 
 defineProps<Props>();
 

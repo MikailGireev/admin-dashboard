@@ -1,4 +1,4 @@
-export type Props = {
+export interface Props {
   name:
     | 'dashboard'
     | 'products'
@@ -30,4 +30,4 @@ export type Props = {
   size?: string;
   height?: string;
   class?: string;
-};
+}

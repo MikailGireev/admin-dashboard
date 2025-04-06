@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import type { Props } from '../types/input';
+interface Props {
+  placeholder?: string;
+  type?: 'text' | 'password' | 'email';
+  value?: string;
+  width?: string;
+}
 
 defineProps<Props>();
 

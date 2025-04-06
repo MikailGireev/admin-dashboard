@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { Bar } from 'vue-chartjs';
+import type { ChartData, ChartOptions } from 'chart.js';
+
 import {
   Chart as ChartJS,
   Title,
@@ -10,7 +12,13 @@ import {
   LinearScale,
 } from 'chart.js';
 
-import type { Props } from '../types/bar-chart';
+
+interface Props {
+  chartData: ChartData<'bar'>;
+  chartOptions: ChartOptions<'bar'>;
+  height?: string;
+  width?: string;
+}
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
 

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import type { Props } from '../types/logo';
+interface Props {
+  varint: 'light' | 'dark';
+}
 
 defineProps<Props>();
 </script>

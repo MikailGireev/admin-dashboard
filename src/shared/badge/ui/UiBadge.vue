@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import type { Props } from '../types/dadge';
+interface Props {
+  status: 'delivered' | 'pending' | 'processing' | 'rejected';
+}
 
 defineProps<Props>();
 </script>
