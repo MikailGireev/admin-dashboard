@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@/shared/icon';
+import { Typography } from '@/shared/typography';
 </script>
 
 <template>

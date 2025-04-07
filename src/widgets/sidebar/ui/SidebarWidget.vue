@@ -5,15 +5,26 @@ import { Icon } from '@/shared/icon';
 
 import { useSidebarStore } from '../model/sidebarStore';
 
+import { storeToRefs } from 'pinia';
+import { computed } from 'vue';
+import router from '@/app/router';
+
+const path = computed(() => router.currentRoute.value.path);
+
 const store = useSidebarStore();
-const { mainMenu, pages } = store;
+const { mainMenu, pages } = storeToRefs(store);
 </script>
 
 <template>
   <div class="sidebar">
     <Logo class="sidebar__logo" varint="light" />
     <div class="sidebar__content">
-      <router-link class="sidebar__link" v-for="page in mainMenu" :key="page.label" :to="page.path">
+      <router-link
+        :class="`sidebar__link ${path === page.path ? 'active' : ''}`"
+        v-for="page in mainMenu"
+        :key="page.label"
+        :to="page.path"
+      >
         <Icon width="22px" :class="page.icon" :name="page.icon" />
         <Typography tag="p" color="primary">{{ page.label }}</Typography>
       </router-link>
@@ -76,6 +87,23 @@ const { mainMenu, pages } = store;
         svg {
           fill: #ffffff;
         }
+      }
+    }
+  }
+
+  .active {
+    background-color: #4880ff;
+    p {
+      color: #ffffff;
+    }
+
+    &::before {
+      background-color: #4880ff;
+    }
+
+    &:deep(.icon) {
+      svg {
+        fill: #ffffff;
       }
     }
   }

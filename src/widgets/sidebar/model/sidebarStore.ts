@@ -1,5 +1,7 @@
 import { defineStore } from 'pinia';
+
 import { ref } from 'vue';
+
 import type { Page } from './types';
 
 export const useSidebarStore = defineStore('sidebar', () => {

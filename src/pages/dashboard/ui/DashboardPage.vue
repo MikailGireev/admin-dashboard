@@ -1,17 +1,21 @@
 <script setup lang="ts">
 import router from '@/app/router';
 
+import { computed } from 'vue';
+
 import { Container } from '@/shared/container';
 import { Typography } from '@/shared/typography';
+
 import { DealsTable } from '@/widgets/deals-table';
 import { ChartWindget } from '@/widgets/sales-chart';
-
 import { StatsCard, useStatsCardStore } from '@/widgets/stats-card';
 
-const urlPath = router.currentRoute.value.name;
+import { storeToRefs } from 'pinia';
+
+const urlPath = computed(() => router.currentRoute.value.name);
 
 const store = useStatsCardStore();
-const { statsCard } = store;
+const { statsCard } = storeToRefs(store);
 </script>
 
 <template>
@@ -29,7 +33,7 @@ const { statsCard } = store;
         />
       </div>
       <ChartWindget title="Sales" />
-      <DealsTable/>
+      <DealsTable />
     </div>
   </Container>
 </template>

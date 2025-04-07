@@ -6,6 +6,7 @@ import { useChartStore } from '../model/chartStore';
 
 import { onMounted } from 'vue';
 import { Select } from '@/shared/select';
+import { storeToRefs } from 'pinia';
 
 interface Props {
   title: string;
@@ -14,7 +15,8 @@ interface Props {
 defineProps<Props>();
 
 const store = useChartStore();
-const { chartData, chartOptions, setChartData, setChartOptions } = store;
+const { setChartData, setChartOptions } = store;
+const { chartData, chartOptions } = storeToRefs(store);
 
 onMounted(() => {
   setChartData({
