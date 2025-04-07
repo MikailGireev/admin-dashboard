@@ -12,7 +12,7 @@ import router from '@/app/router';
 const path = computed(() => router.currentRoute.value.path);
 
 const store = useSidebarStore();
-const { mainMenu, pages } = storeToRefs(store);
+const { mainMenu, pages, mainSettings } = storeToRefs(store);
 </script>
 
 <template>
@@ -30,6 +30,16 @@ const { mainMenu, pages } = storeToRefs(store);
       </router-link>
       <hr class="sidebar__line" />
       <router-link class="sidebar__link" v-for="page in pages" :key="page.label" :to="page.path">
+        <Icon width="22px" :class="page.icon" :name="page.icon" />
+        <Typography tag="p" color="primary">{{ page.label }}</Typography>
+      </router-link>
+      <hr class="sidebar__line" />
+      <router-link
+        class="sidebar__link"
+        v-for="page in mainSettings"
+        :key="page.label"
+        :to="page.path"
+      >
         <Icon width="22px" :class="page.icon" :name="page.icon" />
         <Typography tag="p" color="primary">{{ page.label }}</Typography>
       </router-link>

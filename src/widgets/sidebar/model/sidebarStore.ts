@@ -81,5 +81,18 @@ export const useSidebarStore = defineStore('sidebar', () => {
     },
   ]);
 
-  return { mainMenu, pages };
+  const mainSettings = ref<Page[]>([
+    {
+      label: 'Settings',
+      path: '/settings',
+      icon: 'settings',
+    },
+    {
+      label: 'Logout',
+      path: '/logout',
+      icon: 'logout',
+    },
+  ]);
+
+  return { mainMenu, pages, mainSettings };
 });

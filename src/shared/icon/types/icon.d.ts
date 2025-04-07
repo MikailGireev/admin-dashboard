@@ -6,7 +6,6 @@ export interface Props {
     | 'inbox'
     | 'orders'
     | 'product-stock'
-    | 'settings'
     | 'menu'
     | 'search'
     | 'notification'
@@ -25,6 +24,8 @@ export interface Props {
     | 'total-pending'
     | 'trending-up'
     | 'trending-down'
+    | 'settings'
+    | 'logout'
     | string;
   color?: 'white' | 'dark';
   size?: string;
