@@ -1,21 +1,25 @@
-import { useForm } from 'vee-validate';
-import type { RegisterForm } from '../types';
-import { registerSchema } from './validatuin';
-import { registerApi } from '../api/registerApi';
+import type { UserRegister } from '../types';
+import { useAuthStore } from './authUseStore';
 
 export const useRegister = () => {
-  const { handleSubmit, isSubmitting } = useForm<RegisterForm>({
-    validationSchema: registerSchema,
-  });
+  const store = useAuthStore();
 
-  const submit = async (values: RegisterForm) => {
-    console.log(values);
-    await registerApi(values);
+  const submit = async (e: Event) => {
+    e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const values: UserRegister = {
+      email: formData.get('email') as string,
+      username: formData.get('username') as string,
+      password: formData.get('password') as string,
+    };
+
+    await store.regUser(values);
   };
 
   return {
     submit,
-    handleSubmit,
-    isSubmitting,
   };
 };

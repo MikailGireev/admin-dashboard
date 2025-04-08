@@ -1,38 +1,28 @@
 <script setup lang="ts">
-import { ErrorMessage, Field, Form } from 'vee-validate';
-
 import { useRegister } from '../model/useRegister';
 
-const { submit, handleSubmit, isSubmitting } = useRegister();
+const { submit } = useRegister();
 </script>
 
 <template>
-  <Form class="form" @submit="handleSubmit(submit)">
+  <form class="form" @submit.prevent="submit">
     <div class="email-container form-control">
       <label for="email">Email address</label>
-      <Field name="email" type="email" placeholder="Email" />
+      <input name="email" type="email" placeholder="Email" />
     </div>
 
     <div class="username-container form-control">
       <label for="username">Username</label>
-      <Field name="username" type="text" placeholder="Username" />
-      <ErrorMessage name="username" />
+      <input name="username" type="text" placeholder="Username" />
     </div>
 
     <div class="password-container form-control">
       <label for="password">Password</label>
-      <Field name="password" type="password" placeholder="Password" />
-      <ErrorMessage name="password" />
+      <input name="password" type="password" placeholder="Password" />
     </div>
 
-    <div class="form-control">
-      <label for="confirmPassword">Confirm Password</label>
-      <Field name="confirmPassword" type="password" placeholder="Confirm Password" />
-      <ErrorMessage name="confirmPassword" />
-    </div>
-
-    <button class="form-button" type="submit" :disabled="isSubmitting">Sign Up</button>
-  </Form>
+    <button class="form-button" type="submit">Sign Up</button>
+  </form>
 </template>
 
 <style scoped lang="scss">
