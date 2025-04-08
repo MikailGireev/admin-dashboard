@@ -9,6 +9,5 @@
 <style scoped lang="scss">
 .layout {
   background-color: #4880ff;
-  height: 100vh;
 }
 </style>

@@ -4,19 +4,18 @@ import { registerSchema } from './validatuin';
 import { registerApi } from '../api/registerApi';
 
 export const useRegister = () => {
-  const { handleSubmit, errors, values, isSubmitting } = useForm<RegisterForm>({
+  const { handleSubmit, isSubmitting } = useForm<RegisterForm>({
     validationSchema: registerSchema,
-    initialValues: {
-      username: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-    },
   });
 
-  const onSubmit = handleSubmit(async (formValue) => {
-    await registerApi(formValue);
-  });
+  const submit = async (values: RegisterForm) => {
+    console.log(values);
+    await registerApi(values);
+  };
 
-  return { onSubmit, errors, values, isSubmitting };
+  return {
+    submit,
+    handleSubmit,
+    isSubmitting,
+  };
 };
