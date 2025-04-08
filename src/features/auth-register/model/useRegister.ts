@@ -1,3 +1,4 @@
+import router from '@/app/router';
 import type { UserRegister } from '../types';
 import { useAuthStore } from './authUseStore';
 
@@ -16,7 +17,14 @@ export const useRegister = () => {
       password: formData.get('password') as string,
     };
 
-    await store.regUser(values);
+    try {
+      await store.regUser(values);
+      if (store.errorMesage) return;
+
+      router.push('/');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return {
