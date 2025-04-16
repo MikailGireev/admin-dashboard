@@ -26,6 +26,10 @@ export interface Props {
     | 'trending-down'
     | 'settings'
     | 'logout'
+    | 'user-manage-account'
+    | 'user-change-password'
+    | 'user-activity-log'
+    | 'user-logout'
     | string;
   color?: 'white' | 'dark';
   size?: string;

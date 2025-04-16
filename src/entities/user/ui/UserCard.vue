@@ -4,6 +4,7 @@ import { Icon } from '@/shared/icon';
 import { Typography } from '@/shared/typography';
 import type { Props } from '../types/userCard';
 import { useUserStore } from '../model/userStore';
+import UserDropdown from '@/features/user-dropdown/ui/UserDropdown.vue';
 
 defineProps<Props>();
 
@@ -19,6 +20,7 @@ const { user } = store;
       <Typography size="12px" tag="span">{{ user?.role }}</Typography>
     </div>
     <Icon class="drop-down" name="drop-down" />
+    <UserDropdown />
   </div>
 </template>
 
@@ -27,6 +29,7 @@ const { user } = store;
   display: flex;
   gap: 16px;
   align-items: center;
+  position: relative;
 
   &__title {
     display: flex;
