@@ -4,6 +4,10 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --color-primary: #202224;
   --color-trend-label: #606060;

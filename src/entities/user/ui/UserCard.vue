@@ -5,11 +5,12 @@ import { Typography } from '@/shared/typography';
 import type { Props } from '../types/userCard';
 import { useUserStore } from '../model/userStore';
 import UserDropdown from '@/features/user-dropdown/ui/UserDropdown.vue';
+import { storeToRefs } from 'pinia';
 
 defineProps<Props>();
 
 const store = useUserStore();
-const { user } = store;
+const { user, isShow } = storeToRefs(store);
 </script>
 
 <template>
@@ -19,8 +20,8 @@ const { user } = store;
       <Typography size="14px" tag="span">{{ user?.name }}</Typography>
       <Typography size="12px" tag="span">{{ user?.role }}</Typography>
     </div>
-    <Icon class="drop-down" name="drop-down" />
-    <UserDropdown />
+    <Icon @click="store.setShow" class="drop-down" name="drop-down" />
+    <UserDropdown v-if="isShow" />
   </div>
 </template>
 
