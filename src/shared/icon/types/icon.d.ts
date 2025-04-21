@@ -30,6 +30,7 @@ export interface Props {
     | 'user-change-password'
     | 'user-activity-log'
     | 'user-logout'
+    | 'check'
     | string;
   color?: 'white' | 'dark';
   size?: string;

@@ -13,7 +13,7 @@ defineProps<Props>();
   <component
     :is="tag"
     :style="{ fontSize: size, fontWeight: weight }"
-    :class="`typography typography--${color}`"
+    :class="['typography', color ? `typography--${color}` : '']"
     ><slot></slot
   ></component>
 </template>

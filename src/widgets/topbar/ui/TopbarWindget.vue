@@ -37,7 +37,7 @@ setUser({
 
         <div class="header__right">
           <Notification />
-          <Lang flag="/flags/Flag.svg" title="English" />
+          <Lang flag="/flags/english-flag.svg" title="English" />
           <User name="Moni Roy" url-img="/avatar/admin.jpeg" role="admin" />
         </div>
       </div>
