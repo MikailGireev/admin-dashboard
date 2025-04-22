@@ -18,10 +18,14 @@
   border-radius: 12px;
 
   &__head {
-    height: 48px;
     background-color: #f1f4f9;
     border-radius: 12px;
     text-align: left;
+  }
+
+  &__body {
+    margin-top: 20px;
+    height: 48px;
   }
 
   th,

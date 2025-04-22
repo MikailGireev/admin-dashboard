@@ -4,8 +4,14 @@ import { Icon } from '@/shared/icon';
 import type { Props } from '../types/lang';
 import { Typography } from '@/shared/typography';
 import LanguageDropdown from '@/features/language-dropdown/ui/LanguageDropdown.vue';
+import { useLangDropdownStore } from '@/features/language-dropdown/model/languageDropdownStore';
+import { storeToRefs } from 'pinia';
 
 defineProps<Props>();
+
+const storeDropdown = useLangDropdownStore();
+const { isShow } = storeToRefs(storeDropdown);
+const { setShow } = storeDropdown;
 </script>
 
 <template>
@@ -15,9 +21,9 @@ defineProps<Props>();
       <span
         ><Typography size="14px" tag="span">{{ title || 'English' }}</Typography>
       </span>
-      <Icon class="drop-down" name="drop-down" />
+      <Icon @click="setShow" class="drop-down" name="drop-down" />
     </div>
-    <LanguageDropdown />
+    <LanguageDropdown v-if="isShow" />
   </div>
 </template>
 

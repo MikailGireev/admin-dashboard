@@ -30,7 +30,7 @@ const { cards } = storeToRefs(storeLang);
 <style scoped lang="scss">
 .language-dropdown {
   position: absolute;
-  top: 100%;
+  top: 150%;
   left: -80px;
   background-color: #ffffff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
